@@ -1,30 +1,31 @@
 # ProcessScheduler
-<br/>Para este trabalho, vocês devem se organizar em grupos de até 4 (quatro) pessoas. Cada grupo
+<pre>
+    Para este trabalho, vocês devem se organizar em grupos de até 4 (quatro) pessoas. Cada grupo
 deve então implementar um escalonador de tarefas para Time Sharing em uma máquina com
 um único processador, criando assim um sistema simples de multiprogramação. A linguagem
 usada na construção do escalonador deve ser Java.
-<br/>A máquina foi criada para rodar pequenos programas, em que cada processo pode contar,
+    A máquina foi criada para rodar pequenos programas, em que cada processo pode contar,
 no máximo, com 2 registradores de uso geral (além do Contador de Programa, como registrador
 de uso especı́fico). Esses registradores são conhecidos internamente como X e Y. Além disso, o
 processador para o qual vocês irão construir o escalonador é extremamente simples, possuindo
 apenas 4 instruções:
-<br/>1. Atribuição: na forma X=<valor> ou Y=<valor>, onde <valor> é um número inteiro e
+    1. Atribuição: na forma X=<valor> ou Y=<valor>, onde <valor> é um número inteiro e
 X e Y são os registradores de uso geral usados pelo processo (note a ausência de espaço
 antes e depois do ‘=’).
-&nbsp;2. Entrada e saı́da: representada pela instrução E/S (que faz as vezes de uma chamada ao
+    2. Entrada e saı́da: representada pela instrução E/S (que faz as vezes de uma chamada ao
 sistema)
-&nbsp;3. Comando: a tarefa executada pela máquina, representada pela instrução COM
-&nbsp;4. Fim de programa: chamada com a única finalidade de remover o programa da memória,
+    3. Comando: a tarefa executada pela máquina, representada pela instrução COM
+    4. Fim de programa: chamada com a única finalidade de remover o programa da memória,
 executando a limpeza final. Representada pela instrução SAIDA
-&nbsp;Sabe-se que um processo pode estar em um dos seguintes estados: Executando, Pronto
+    Sabe-se que um processo pode estar em um dos seguintes estados: Executando, Pronto
 ou Bloqueado. Enquanto há apenas um processo executando, pode haver vários prontos
 para executar ou bloqueados, esperando alguma requisição de E/S se completar. Assim, sua
 implementação deve contemplar uma lista de processos prontos e outra de bloqueados.
-&nbsp;Na ausência de um clock que comande a preempção, quem efetivamente rodará as instruções dos processos é o escalonador, que lê a instrução e a executa, funcionando como
+    Na ausência de um clock que comande a preempção, quem efetivamente rodará as instruções dos processos é o escalonador, que lê a instrução e a executa, funcionando como
 um interpretador. Isso deixa o processo mais lento, naturalmente, mas garante o compartilhamento de tempo. Dentro do escalonador, a fila de processos prontos deve ser ordenada
 conforme a prioridade do processo, enquanto que a fila de bloqueados é ordenada por ordem
 de chegada.
-&nbsp;Seu sistema deve então possuir uma Tabela de Processos, representando todos os programas
+    Seu sistema deve então possuir uma Tabela de Processos, representando todos os programas
 que estão rodando simultaneamente. Cada linha da tabela deve conter uma referência ao Bloco
 de Controle de Processo (BCP), sendo que este contém toda a informação necessária para que
 o processo, após interrompido temporariamente, possa voltar a rodar. Ou seja, o BCP deve
@@ -97,3 +98,4 @@ ser rodado (como visto no item 5e).
 da fila apropriada e da tabela de processos.
 Vale lembrar que apenas um máximo de n com instruções (de qualquer um dos 4 tipos
 definidos mais adiante) podem ser executadas por vez pelo processador quando o processo
+</pre>
