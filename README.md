@@ -1,14 +1,14 @@
 # ProcessScheduler
-&nbsp;Para este trabalho, vocês devem se organizar em grupos de até 4 (quatro) pessoas. Cada grupo
+<br/>Para este trabalho, vocês devem se organizar em grupos de até 4 (quatro) pessoas. Cada grupo
 deve então implementar um escalonador de tarefas para Time Sharing em uma máquina com
 um único processador, criando assim um sistema simples de multiprogramação. A linguagem
 usada na construção do escalonador deve ser Java.
-&nbsp;A máquina foi criada para rodar pequenos programas, em que cada processo pode contar,
+<br/>A máquina foi criada para rodar pequenos programas, em que cada processo pode contar,
 no máximo, com 2 registradores de uso geral (além do Contador de Programa, como registrador
 de uso especı́fico). Esses registradores são conhecidos internamente como X e Y. Além disso, o
 processador para o qual vocês irão construir o escalonador é extremamente simples, possuindo
 apenas 4 instruções:
-&nbsp;1. Atribuição: na forma X=<valor> ou Y=<valor>, onde <valor> é um número inteiro e
+<br/>1. Atribuição: na forma X=<valor> ou Y=<valor>, onde <valor> é um número inteiro e
 X e Y são os registradores de uso geral usados pelo processo (note a ausência de espaço
 antes e depois do ‘=’).
 &nbsp;2. Entrada e saı́da: representada pela instrução E/S (que faz as vezes de uma chamada ao
