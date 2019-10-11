@@ -8,6 +8,7 @@ no máximo, com 2 registradores de uso geral (além do Contador de Programa, c
 de uso especı́fico). Esses registradores são conhecidos internamente como X e Y. Além disso, o
 processador para o qual vocês irão construir o escalonador é extremamente simples, possuindo
 apenas 4 instruções:
+</pre>
     1. Atribuição: na forma X=<valor> ou Y=<valor>, onde <valor> é um número inteiro e
 X e Y são os registradores de uso geral usados pelo processo (note a ausência de espaço
 antes e depois do ‘=’).
@@ -16,6 +17,7 @@ sistema)
     3. Comando: a tarefa executada pela máquina, representada pela instrução COM
     4. Fim de programa: chamada com a única finalidade de remover o programa da memória,
 executando a limpeza final. Representada pela instrução SAIDA
+<pre>
     Sabe-se que um processo pode estar em um dos seguintes estados: Executando, Pronto
 ou Bloqueado. Enquanto há apenas um processo executando, pode haver vários prontos
 para executar ou bloqueados, esperando alguma requisição de E/S se completar. Assim, sua
