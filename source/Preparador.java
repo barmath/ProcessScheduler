@@ -24,9 +24,9 @@ class Preparador {
             j++;
         }
 
-        int prioridadeEncontrada = todasPrioridades.get(indiceDoProcesso);
+        //int prioridadeEncontrada = ;
 
-        return prioridadeEncontrada;
+        return todasPrioridades;
     }
  
     public static ArrayList<String> agrupadorDeCodigo(String endereco) throws Exception  {
@@ -50,7 +50,7 @@ class Preparador {
 
         String numeroDoProcesso = "01";
 
-        int indiceDoProcesso = 1; 
+        int indiceDoProcesso = 0; 
 
         ArrayList<Integer> prioridadeDoProcesso = new ArrayList<Integer>();
 
@@ -64,7 +64,7 @@ class Preparador {
 
         prioridadeDoProcesso = buscadorDePrioridade(indiceDoProcesso);
 
-
+        System.out.println(prioridadeDoProcesso.get(indiceDoProcesso));
 
         // processA.mudaValores(valorInicialY);
         // processA.mudaValores(valorInicialX);
