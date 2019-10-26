@@ -8,6 +8,26 @@ class Preparador {
     private static String valorInicialY = "X=0";
 
     //private static LinkedList<String> BCP = new LinkedList();
+
+    public static ArrayList<Integer> buscadorDePrioridade(int indiceDoProcesso) throws Exception {
+
+        String enderecoPrioridades = "../processos/prioridades.txt" ;
+
+        File file = new File(enderecoPrioridades);
+        Scanner sc = new Scanner(file);
+        ArrayList<Integer> todasPrioridades = new ArrayList<Integer>();
+
+        int j = 0;
+        while (sc.hasNextLine()){
+            //System.out.println(sc.nextLine());
+            todasPrioridades.add(Integer.parseInt(sc.nextLine()));
+            j++;
+        }
+
+        int prioridadeEncontrada = todasPrioridades.get(indiceDoProcesso);
+
+        return prioridadeEncontrada;
+    }
  
     public static ArrayList<String> agrupadorDeCodigo(String endereco) throws Exception  {
 
@@ -30,18 +50,31 @@ class Preparador {
 
         String numeroDoProcesso = "01";
 
-        String enderoA = "../processos/"+numeroDoProcesso+".txt" ;
+        int indiceDoProcesso = 1; 
+
+        ArrayList<Integer> prioridadeDoProcesso = new ArrayList<Integer>();
+
+        String enderecoProcesso = "../processos/"+numeroDoProcesso+".txt" ;
+
         ArrayList<String> subrotina = new ArrayList<String>();
 
         Processo processA = new Processo();
 
-        subrotina = agrupadorDeCodigo(enderoA);  
+        subrotina = agrupadorDeCodigo(enderecoProcesso); 
 
-        processA.mudaValores(valorInicialY);
-        processA.mudaValores(valorInicialX);
+        prioridadeDoProcesso = buscadorDePrioridade(indiceDoProcesso);
 
-        System.out.println(processA.x);
-        System.out.println(processA.y);
+
+
+        // processA.mudaValores(valorInicialY);
+        // processA.mudaValores(valorInicialX);
+
+        // System.out.println(subrotina);
+
+        // System.out.println(processA.x);
+        // System.out.println(processA.y);
+
+
            
     }
 	public static void main(String [] args) throws Exception {
