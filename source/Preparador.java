@@ -69,7 +69,9 @@ class Preparador {
         // processA.mudaValores(valorInicialY);
         // processA.mudaValores(valorInicialX);
 
-        // System.out.println(subrotina);
+        String nomeDoProcesso = processA;
+
+        System.out.println(nomeDoProcesso);
 
         // System.out.println(processA.x);
         // System.out.println(processA.y);
